@@ -6,11 +6,9 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class StateMachine implements EventHandler {
@@ -46,7 +44,7 @@ public class StateMachine implements EventHandler {
         mContainer = container;
     }
 
-    State getContainer() {
+    public State getContainer() {
         return mContainer;
     }
 
@@ -281,7 +279,7 @@ public class StateMachine implements EventHandler {
         return this;
     }
 
-    List<State> getDescendantStates() {
+    public List<State> getDescendantStates() {
         return mDescendantStateList;
     }
 
@@ -299,5 +297,9 @@ public class StateMachine implements EventHandler {
 
     void setName(String name) {
         this.mName = name;
+    }
+
+    public List<State> getStateList() {
+        return mStateList;
     }
 }

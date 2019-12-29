@@ -79,7 +79,7 @@ public class Parallel extends State<Parallel> {
     }
 
     @Override
-    Collection<? extends State> getDescendantStates() {
+    public Collection<? extends State> getDescendantStates() {
         List<State> descendantStates = new ArrayList<State>();
         for (StateMachine stateMachine : mStateMachineList) {
             descendantStates.addAll(stateMachine.getDescendantStates());
