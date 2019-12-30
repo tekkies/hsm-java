@@ -58,7 +58,7 @@ public class Sub extends State<Sub> {
     }
 
     @Override
-    Collection<? extends State> getDescendantStates() {
+    public Collection<? extends State> getDescendantStates() {
         return mSubMachine.getDescendantStates();
     }
 

@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -64,7 +63,7 @@ public class State<T extends State<T>> {
         mOwner = ownerMachine;
     }
 
-    StateMachine getOwner() {
+    public StateMachine getOwner() {
         return mOwner;
     }
 
@@ -120,7 +119,7 @@ public class State<T extends State<T>> {
         // do nothing
     }
 
-    Collection<? extends State> getDescendantStates() {
+    public Collection<? extends State> getDescendantStates() {
         return new ArrayList<State>();
     }
 
@@ -130,5 +129,9 @@ public class State<T extends State<T>> {
 
     public List<State> getAllActiveStates() {
         return new ArrayList<State>();
+    }
+
+    public LinkedListMultimap<String, Handler> getEventHandlers() {
+        return mHandlers;
     }
 }

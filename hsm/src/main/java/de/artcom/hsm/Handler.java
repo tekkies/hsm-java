@@ -1,6 +1,6 @@
 package de.artcom.hsm;
 
-class Handler {
+public class Handler {
 
     private final State mTargetState;
     private final TransitionKind mKind;
