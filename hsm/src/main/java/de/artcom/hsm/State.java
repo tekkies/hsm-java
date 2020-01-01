@@ -134,4 +134,8 @@ public class State<T extends State<T>> {
     public LinkedListMultimap<String, Handler> getEventHandlers() {
         return mHandlers;
     }
+
+    public Action getEnterAction() {
+        return mOnEnterAction;
+    }
 }
