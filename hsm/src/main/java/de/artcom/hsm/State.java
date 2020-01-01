@@ -138,4 +138,8 @@ public class State<T extends State<T>> {
     public Action getEnterAction() {
         return mOnEnterAction;
     }
+
+    public Action getExitAction() {
+        return mOnExitAction;
+    }
 }
